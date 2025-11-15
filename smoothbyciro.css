@@ -1,0 +1,27 @@
+/* Polished modal and button animations */
+  .modal-content { transition: transform .32s cubic-bezier(.2,.9,.3,1), opacity .22s; will-change: transform, opacity; border-radius:12px; }
+  .modal-scale-in { transform: translateY(-8px) scale(.995); opacity: 0; }
+  .modal-scale-show { transform: translateY(0) scale(1); opacity: 1; }
+  .btn-confirm { transition: transform .12s ease, box-shadow .12s ease, background .2s; }
+  .btn-confirm:active, .btn-confirm.pressed { transform: translateY(2px) scale(.996); box-shadow: 0 6px 18px rgba(0,0,0,0.10) inset; }
+  .btn-send { transition: transform .16s cubic-bezier(.2,.9,.3,1), box-shadow .2s; }
+  .btn-send:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(16,120,116,0.08); }
+  .pin-modal .pin-input { transition: transform .16s ease, box-shadow .16s ease; }
+
+  /* Fancy info modal style */
+  .info-modal-custom .modal-content{ border-radius:14px; padding:0; overflow:hidden; }
+  .info-modal-custom .modal-header{ background: linear-gradient(90deg,#1565C0,#0f4f86); color:#fff; border-bottom:0; padding:18px; }
+  .info-modal-custom .modal-title{ display:flex; align-items:center; gap:10px; font-weight:800; }
+  .info-modal-custom .modal-body{ padding:18px; font-size:15px; color:#203243; }
+  .info-modal-custom .modal-footer{ padding:12px 18px; border-top:0; }
+  .info-icon { width:46px; height:46px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.12); box-shadow: 0 8px 24px rgba(8,20,40,0.06); }
+
+  /* Smooth backdrop dim */
+  .modal-backdrop.show { opacity: .62; transition: opacity .28s ease; }
+
+  /* subtle card pulse for confirm modal when pressing confirm */
+  .card-pulse { animation: pulseCard .32s ease; }
+  @keyframes pulseCard { 0%{ transform: translateY(0) } 50%{ transform: translateY(-6px) } 100%{ transform: translateY(0) } }
+
+  /* small helper for success icon */
+  .suc-icon { width:56px; height:56px; border-radius:14px; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#e6faf0,#d7f7e8); color:#0b7a4a; font-weight:800; }
