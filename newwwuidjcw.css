@@ -1,0 +1,317 @@
+.panel-produk{
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+.panel-fitur{
+    display: flex;
+    margin-bottom: 10px;
+}
+.panel-fitur button{
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--color--utama);
+}
+
+.view-toggle {
+  display: flex;
+  background: aliceblue;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 130px;
+  margin-left: 10px;
+}
+
+.view-toggle button.active {
+  background: var(--color--utama);
+  color: white;
+}
+.panel-fitur input{
+    padding: 12px;
+    border: 2px solid #f1f1f1;
+    background: aliceblue;
+    border-radius: 12px;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.tab-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  gap: 10px;
+}
+
+.tab-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tab-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.tab-btn {
+  flex: 0 0 auto;
+  background: aliceblue;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  background: #e3e3e3;
+}
+
+.tab-btn.active {
+  background: var(--color--utama);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.mode-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+.mode-list .pil-produk {
+    padding-bottom: 25px;
+}
+.mode-list .pil-produk p{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.pil-produk{
+    background: white;
+    background-image: url('https://neropict.wordpress.com/wp-content/uploads/2025/10/desain-tanpa-judul-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #f1f1f1;
+    position: relative;
+}
+.pil-produk
+.ribbon {
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon {
+  --f: .5em; 
+  --r: .8em;
+  position: absolute;
+  top: 20px;
+  right: calc(-1*var(--f));
+  padding-inline: .25em;
+  line-height: 1.8;
+  background: red;
+  border-bottom: var(--f) solid #0005;
+  border-left: var(--r) solid #0000;
+  clip-path: 
+    polygon(var(--r) 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),var(--r) calc(100% - var(--f)),
+      0 calc(50% - var(--f)/2));
+}
+.pil-produk h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+.pil-produk p{
+    font-size: 400;
+    color: black;
+    opacity: .8;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.pil-produk h2{
+  font-size: 10px !important;
+  color: orangered !important;
+  font-weight: 500;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.pil-produk s{
+    font-size: 11px;
+    color: red;
+}
+.empty-item{
+    text-align: center;
+    margin-top: 25px;
+}
+.empty-item img{
+    width: 125px;
+}
+.empty-item p{
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+    margin-top: 10px;
+}
+.pencarian-tidak-ditemukan{
+    text-align: center;
+}
+.pencarian-tidak-ditemukan img{
+    width: 150px;
+    margin-bottom: -20px;
+}
+.pencarian-tidak-ditemukan p{
+    font-size: 13px;
+    font-weight: normal;
+    opacity: .8;
+    color: black;
+}
+.offcanvas {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out; 
+  z-index: 1050; 
+}
+.offcanvas-body{
+  background: white;
+  border-radius: 5px;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 30px 30px 0px 0px;
+}
+.offcanvas-body img{
+  width: 30px;
+}
+.offcanvas.show {
+  transform: translateY(0); 
+}
+.offcanvas-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+background: rgba(8, 58, 201, 0.2);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2px);
+-webkit-backdrop-filter: blur(2px);
+  z-index: 1049;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+.offcanvas h1{
+  font-size: 14px;
+  margin: 0;
+  width: 100%;
+}
+.header-offcanvas{
+  border-radius:0px;
+  padding:14px;
+  padding-left: 14px;
+  padding-right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.header-offcanvas button{
+    background: #f1f1f1 !important;
+    padding: 2px;
+    height: 5px;
+    border: none;
+    width: 50px;
+    border-radius: 100px;
+
+}
+.head-text-canvas {
+    text-align: center;
+}
+.head-text-canvas h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+.head-text-canvas p{
+    opacity: .8;
+    font-size: 12px;
+}
+.header-offcanvas img{
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(80deg) brightness(103%) contrast(101%);
+  width: 20px;
+}
+.offcanvas-overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+.confirm{
+  padding:14px ;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.confirm button{
+  width: 100%;
+  padding: 12px;
+  font-size: 13px;
+  border: none;
+  background: var(--color--utama);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+.btn-link{
+  color: var(--color--utama);
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 5px;
+}
+.detail{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid #f1f1f1;
+  padding: 14px;
+  padding-left: 0px;
+}
+.detail p{
+  font-size: 13px;
+  width: 100%;
+  margin: 0;
+  font-weight: 650;
+}
+.space-detail{
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-top: 15px;
+}
+.deskripsi-produk{
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: aliceblue;
+  border-radius: 5px;
+  padding: 12px;
+}
